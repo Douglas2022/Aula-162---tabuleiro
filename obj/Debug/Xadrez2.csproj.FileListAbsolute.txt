@@ -1,0 +1,7 @@
+C:\Users\paulo\OneDrive\Área de Trabalho\Aulas - C#\Xadrez2\Xadrez2\bin\Debug\Xadrez2.exe.config
+C:\Users\paulo\OneDrive\Área de Trabalho\Aulas - C#\Xadrez2\Xadrez2\bin\Debug\Xadrez2.exe
+C:\Users\paulo\OneDrive\Área de Trabalho\Aulas - C#\Xadrez2\Xadrez2\bin\Debug\Xadrez2.pdb
+C:\Users\paulo\OneDrive\Área de Trabalho\Aulas - C#\Xadrez2\Xadrez2\obj\Debug\Xadrez2.csproj.AssemblyReference.cache
+C:\Users\paulo\OneDrive\Área de Trabalho\Aulas - C#\Xadrez2\Xadrez2\obj\Debug\Xadrez2.csproj.CoreCompileInputs.cache
+C:\Users\paulo\OneDrive\Área de Trabalho\Aulas - C#\Xadrez2\Xadrez2\obj\Debug\Xadrez2.exe
+C:\Users\paulo\OneDrive\Área de Trabalho\Aulas - C#\Xadrez2\Xadrez2\obj\Debug\Xadrez2.pdb
