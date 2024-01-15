@@ -20,8 +20,9 @@ namespace Xadrez2
                     {
                         Console.Write(tab.peca(i, j) + " ");
                     }
-
+                  
                 }
+                Console.WriteLine();
             }
         }
     }
