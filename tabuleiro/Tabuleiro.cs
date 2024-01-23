@@ -1,4 +1,6 @@
-﻿namespace tabuleiro
+﻿using System.Runtime.ExceptionServices;
+
+namespace tabuleiro
 {
     class Tabuleiro
     {
@@ -22,11 +24,17 @@
         }
         public bool ExistePeca(Posicao pos)
         {
+            if (ExistePeca(pos))
+            {
+                throw new TabuleiroException("Já existe uma peça nessa posição!");
+            }
+          
             ValidarPosicao(pos);
             return peca(pos) != null;
         }
 
         public void ColocarPecas(Peca P, Posicao pos)
+            
         {
             pecas[pos.linha, pos.coluna] = P;
             P.posicao = pos;
@@ -43,7 +51,7 @@
         {
             if (!PosicaoValida(pos))
             {
-                throw new TabuleiroException("Posição válida");
+                throw new TabuleiroException("Posição inválida");
             }
         }
     }
