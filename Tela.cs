@@ -11,7 +11,7 @@ namespace Xadrez2
             {
                 for (int j = 0; j < tab.colunas; j++)
                 {
-                    Console.Write(tab.peca(i, j) + " ");
+                   // Console.Write(tab.peca(i, j) + " ");
                     if (tab.peca(i, j) == null)
                     {
                         Console.Write("- ");
