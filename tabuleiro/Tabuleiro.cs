@@ -1,4 +1,6 @@
-﻿using System.Runtime.ExceptionServices;
+﻿using System;
+using System.Runtime.ExceptionServices;
+using xadrez;
 
 namespace tabuleiro
 {
@@ -53,6 +55,11 @@ namespace tabuleiro
             {
                 throw new TabuleiroException("Posição inválida");
             }
+        }
+
+        internal void ColocarPecas(Torre torre)
+        {
+            throw new NotImplementedException();
         }
     }
 }
