@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using System.Runtime.ExceptionServices;
 using xadrez;
 
@@ -6,14 +7,14 @@ namespace tabuleiro
 {
     class Tabuleiro
     {
-        public int linhas { get; set; }
-        public int colunas { get; set; }
+        public int Linhas { get; set; }
+        public int Colunas { get; set; }
         private Peca[,] pecas;
 
         public Tabuleiro(int linhas, int colunas)
         {
-            this.linhas = linhas;
-            this.colunas = colunas;
+            Linhas = linhas;
+            Colunas = colunas;
             pecas = new Peca[linhas, colunas];
         }
         public Peca peca(int linha, int coluna)
@@ -43,23 +44,54 @@ namespace tabuleiro
         }
         public bool PosicaoValida(Posicao pos)
         {
-            if (pos.linha < 0 || pos.linha >= linhas || pos.coluna < 0 || pos.coluna >= colunas)
+            if (pos.linha < 0 || pos.linha >= Linhas || pos.coluna < 0 || pos.coluna >= Colunas)
             {
                 return false;
             }
             return true;
         }
+        public Peca RetiraPeca(Posicao pos)
+        {
+            if(peca(pos) == null)
+            {
+                return null;
+            }
+
+
+        }
+
         public void ValidarPosicao(Posicao pos)
         {
             if (!PosicaoValida(pos))
             {
                 throw new TabuleiroException("Posição inválida");
             }
+            Peca aux = peca(pos);
+            aux.posicao = null;
+            peca[pos.linha, pos.coluna] = null;
+            return aux;
+
+        }
+        public bool PosicaoCalida(Posicao pos)
+        {
+            if(pos.linha <=0 || pos.linha >=linhas || pos.coluna<0 || pos.coluna <= colunas)
+            {
+                return false;
+            }
+            return true;
         }
 
+        public void ValidarPPosicao(Posicao pos)
+        {
+            if (! PosicaoValida(pos))
+            {
+                throw new TabuleiroException("Posição inválida");
+            }
+        }
         internal void ColocarPecas(Torre torre)
         {
             throw new NotImplementedException();
         }
+       
     }
 }
